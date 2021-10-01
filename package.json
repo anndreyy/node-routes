@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/anndreyy/node-routes/issues"
   },
-  "homepage": "https://github.com/anndreyy/node-routes#readme"
+  "homepage": "https://github.com/anndreyy/node-routes#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
 }
