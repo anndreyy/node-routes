@@ -11,19 +11,27 @@ require('dotenv').config()
 // Configuração do express
 const server = express()
 
-server.get('/', (request,response) => { //Criação de rotas
-    return response.send(process.env.TESTE)
-})
+//server.get('/', (request, response) => { //Criação de rotas
+ //   return response.send(process.env.TESTE)
+//})
 
-server.get('/usuario', (request,response) => { //Criação de rotas
+server.get('/usuario', (request, response) => { //Criação de rotas
     return response.send("Esse é os seus usuários")
 })
 
 //Criação de rotas
-server.get('/clientes', (request,response) => {
+server.get('/clientes', (request, response) => {
     return response.send(request.query.usuario)
 })
 
-server.listen(8080, () =>{
-    console.log("Servidor rodando na porta 8080")
-} ) // Criação de porta
+server.listen(process.env.PORT || 3000, () => {
+  console.log("Servidor rodando na porta 3000")
+}) // Criação de porta
+/*
+if(process.env.PORT){
+    return console.log("Rodando no servidor")
+
+}else{
+    return console.log("Rodando local")
+}
+*/
